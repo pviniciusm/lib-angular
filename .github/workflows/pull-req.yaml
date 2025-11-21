@@ -1,0 +1,26 @@
+name: "Build da biblioteca"
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-slim
+        steps:
+            - name: "Checkout the project"
+              uses: actions/checkout@v5
+
+            - name: "Setup node"
+              uses: actions/setup-node@v6
+              with:
+                  node-version: ">=22"
+
+            - name: "Install dependencies"
+              run: npm install --force
+
+            - name: "Running tests"
+              run: "npm run test:ci"
+
+            - name: "Build library"
+              run: npx ng build ds
