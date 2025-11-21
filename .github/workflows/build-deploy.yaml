@@ -27,6 +27,7 @@ jobs:
 
     deployment:
         runs-on: ubuntu-slim
+        needs: [build]
         steps:
             - name: "Starting deployment"
               run: echo "Deploy started"
