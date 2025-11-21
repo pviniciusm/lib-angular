@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "allowJs": true,
+        "types": ["jest"],
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "outDir": "./out-tsc/spec"
+    },
+    "include": ["src/**/*.spec.ts", "projects/**/*.spec.ts", "setup-jest.ts"]
+}
