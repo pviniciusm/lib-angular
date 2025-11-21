@@ -24,3 +24,9 @@ jobs:
 
             - name: "Build library"
               run: npx ng build ds
+
+    deployment:
+        runs-on: ubuntu-slim
+        steps:
+            - name: "Starting deployment"
+              run: echo "Deploy started"
