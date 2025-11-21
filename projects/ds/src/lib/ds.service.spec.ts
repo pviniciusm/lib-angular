@@ -13,5 +13,6 @@ describe("DsService", () => {
     it("should be created", () => {
         expect(service).toBeTruthy();
         expect(1).toBe(2);
+        console.log("teste");
     });
 });
