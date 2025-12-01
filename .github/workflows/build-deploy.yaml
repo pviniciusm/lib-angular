@@ -1,4 +1,4 @@
-name: "Build da biblioteca"
+name: "Build e release"
 on: workflow_dispatch
 
 jobs:
