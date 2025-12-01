@@ -22,6 +22,10 @@ jobs:
             - name: "Running tests"
               run: "npm run test:ci"
 
+            - name: Set up new version
+              run: npx semantic-release
+              working-directory: ./projects/ds
+
             - name: "Build library"
               run: npx ng build ds
 
