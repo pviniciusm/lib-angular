@@ -25,6 +25,8 @@ jobs:
 
             - name: Set up new version
               run: npx semantic-release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               working-directory: ./projects/ds
 
             - name: "Build library"
