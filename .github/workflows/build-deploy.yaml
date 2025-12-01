@@ -4,6 +4,9 @@ on: workflow_dispatch
 jobs:
     build:
         runs-on: ubuntu-slim
+        permissions:
+            contents: write
+            pull-requests: read
         steps:
             - name: "Checkout the project"
               uses: actions/checkout@v5
